@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     ListView l1;
     EditText e1;
     static int i=0;
+    static  String addon="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,17 +70,50 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void enter(View v)
-    {
-        SharedPreferences share=getSharedPreferences("mydata", Context.MODE_PRIVATE);
-        String username=share.getString("username","not found");
-        i++;
-        DatabaseReference chi = myref.child(""+i);
-        chi.setValue(""+username.toUpperCase()+": "+e1.getText().toString());
+    public void enter(View v) {
+        SharedPreferences share = getSharedPreferences("mydata", Context.MODE_PRIVATE);
+        String username = share.getString("username", "not found");
+        String check;
+        check = e1.getText().toString();
+        if (check.equals("cheatlove")) {
+            addon = " nd i love you";
+            e1.setText("");
+            Toast.makeText(this, "Developers Cheat activated", Toast.LENGTH_SHORT).show();
+        }else if(check.equals("cheatchu"))
+        {
+            addon = " chutiye";
+            e1.setText("");
+            Toast.makeText(this, "Developers Cheat activated", Toast.LENGTH_SHORT).show();
+        }
+        else if(check.equals("cheatbc"))
+        {
+            addon = " bhenchod";
+            e1.setText("");
+            Toast.makeText(this, "Developers Cheat activated", Toast.LENGTH_SHORT).show();
+        }
+        else if(check.equals("cheatreset"))
+        {
+            addon = "";
+            e1.setText("");
+            Toast.makeText(this, "Developers Cheat activated", Toast.LENGTH_SHORT).show();
+        }
+        else if(check.equals("cheatlovep"))
+        {
+            addon = " nhi yr i seriously love you";
+            e1.setText("");
+            Toast.makeText(this, "Developers Cheat activated", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            i++;
+            DatabaseReference chi = myref.child("" + i);
+        chi.setValue("" + username.toUpperCase() + ": " + e1.getText().toString() + addon);
         Toast.makeText(this, "Sent", Toast.LENGTH_SHORT).show();
         e1.setText("");
+        }
+       }
 
-    }
+ }
 
 
-}
+
+
