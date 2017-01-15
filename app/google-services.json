@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "160761523068",
+    "firebase_url": "https://chattingva.firebaseio.com",
+    "project_id": "chattingva",
+    "storage_bucket": "chattingva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160761523068:android:0011d60f1cc6e0d3",
+        "android_client_info": {
+          "package_name": "com.harinder.chattingva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160761523068-1jlpasi0kqcmjk2s58teq0tilmb4emh2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.harinder.chattingva",
+            "certificate_hash": "D194D19A83C7B41319A1DCE1796B197BA3650096"
+          }
+        },
+        {
+          "client_id": "160761523068-d2c62kl4qmjbii490ioa155taqttqa5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY7Z25BEpo9F424SdkqqOhUOkJjlW2XQA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160761523068-d2c62kl4qmjbii490ioa155taqttqa5f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
