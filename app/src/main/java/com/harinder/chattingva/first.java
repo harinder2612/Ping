@@ -37,9 +37,13 @@ public void signin (View v)
 
     public void next()
     {
-        Intent intent=new Intent(this,second.class);
+        Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 
-
+ public void back(View view)
+ {
+  Intent i= new Intent(this,second.class);
+     startActivity(i);
+ }
 }
