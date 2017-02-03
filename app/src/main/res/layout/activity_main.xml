@@ -4,38 +4,49 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.harinder.chattingva.MainActivity">
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
         android:id="@+id/list"
-        android:transcriptMode="alwaysScroll"
-        android:stackFromBottom="true"
-        android:layout_height="220dp" />
-
-    <EditText
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_height="70dp"
-        android:hint="Type a message"
-        android:textAlignment="viewStart"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_width="240dp" />
-
-    <Button
-        android:text="Enter"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:onClick="enter"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/linear"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="310dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:hint="  Type a message..."
+            android:inputType="textPersonName"
+            android:textAlignment="viewStart"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="7dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="@drawable/send"
+            android:layout_marginTop="25dp"
+            android:onClick="enter"
+            android:layout_marginRight="7dp"/>
+
+    </LinearLayout>
 </RelativeLayout>
